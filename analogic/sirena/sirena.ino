@@ -1,7 +1,7 @@
 /*************************************************************************************
 **                                                                                  **
 **             Aquest programa fa una lectura analgica del canal A0                 **
-**             modula la intensitat del led amb PWM de la sortida 3                 **
+**             la lectura de la tensio determina la durada de la sirena             **
 **                                                                                  **
 *************************************************************************************/
  
@@ -24,10 +24,8 @@ void setup() {
 
 //******  Loop  **********************************************************************
 void loop() {
-  sensorValue = analogRead(A0);
- // analogWrite(9, sensorValue/4);
+ sensorValue = analogRead(A0);
  playTone(1700, 300);
- //playTone(820, sensorValue);
  delay(sensorValue);
 }
 
