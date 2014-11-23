@@ -12,7 +12,7 @@
 //******  Variables  *****************************************************************
 
 const int speakerPin = 9;
-int sensorValue = 0;
+int duradaSirena = 0;
 
 
 //******  Includes  ******************************************************************
@@ -24,9 +24,9 @@ void setup() {
 
 //******  Loop  **********************************************************************
 void loop() {
- sensorValue = analogRead(A0);
- playTone(1700, 300);
- delay(sensorValue);
+ duradaSirena = 2 * analogRead(A0);
+ playTone(1700, duradaSirena);
+ delay(800);
 }
 
 //********** Funcions *************************************************************
